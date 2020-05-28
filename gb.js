@@ -1,4 +1,3 @@
-const apiKey = "913dc9d5b9932248ab18e59a3559278f";
 const searchURL = "https://api.rawg.io/api/games?";
 
 function getGames(search, page_size = 10) {
