@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.games {
+  border: 1px solid black;
+  padding: 10px;
+  width: 30%;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.games img {
+  width: 66%;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  z-index: 2;
+  left: 25%;
+  right: 25%;
+  width: 50%;
+  top: 10vh;
+  background-color: white;
+  border: 3px solid steelblue;
+  padding: 20px;
+  display: none;
+}
+
+.modal img {
+  width: 100%;
+}
