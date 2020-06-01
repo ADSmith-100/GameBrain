@@ -45,6 +45,8 @@
   border: 3px solid steelblue;
   padding: 20px;
   display: none;
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
 }
 
 .modal .loading.modal-image {

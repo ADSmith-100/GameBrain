@@ -61,13 +61,13 @@ function displayResults(responseJson) {
 //  });
 //});
 
-function displayMoreInfo(game) {
-  console.log({ game });
-
-  $(".modal h2").text(game.name);
+function displayMoreInfo(id) {
+  console.log({ id });
   $(".modal .modal-image")
-    .css("background-image", `url('${game.background_image}')`)
+    .css("background-image", `url('${id.background_image}')`)
     .removeClass("loading");
+  $(".modal p").text(id.description_raw);
+  $(".modal h2").text(id.name);
 }
 
 function getMoreInfo(id) {
