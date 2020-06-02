@@ -60,3 +60,9 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.youtube a {
+  display: block;
+  margin: 10px 0;
+  font-size: larger;
+}

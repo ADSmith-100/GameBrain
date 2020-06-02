@@ -36,15 +36,27 @@ function displayResults(responseJson) {
   console.log(responseJson);
   $(".results").empty();
   // iterate through the items array
+
   for (let i = 0; i < responseJson.results.length; i++) {
     $(".results").append(
       `
       <div class="games">
         <h2>${responseJson.results[i].name}</h2>
-        <img src="${responseJson.results[i].background_image}">
+        ${
+          responseJson.results[i].background_image !== null
+            ? `<img src="${responseJson.results[i].background_image}"></p>`
+            : ""
+        }
+        
         <p>Release Date: ${responseJson.results[i].released}</p>
-        <p>Metacritic Score: ${responseJson.results[i].metacritic}</p>
-        <a href="#" id="${responseJson.results[i].id}" class="more-info">More Info and YouTube Review Videos!</a>
+        ${
+          responseJson.results[i].metacritic !== null
+            ? `<p>Metacritic Score: ${responseJson.results[i].metacritic}</p>`
+            : ""
+        }
+        <a href="#" id="${
+          responseJson.results[i].id
+        }" class="more-info">More Info and YouTube Review Videos!</a>
       </div>
      `
     );
@@ -52,20 +64,11 @@ function displayResults(responseJson) {
   $("#results").removeClass("hidden");
 }
 
-//$("button").click((e) => {
-// e.preventDefault();
-// const q = $("#search").val();
-//fetch(`https://api.rawg.io/api/games?${q}`)
-// .then((res) => res.json())
-//  .then((games) => {
-//loop through and append to results
-//  });
-//});
 function searchYoutube(gameName) {
   console.log(gameName);
   var params = {
     part: "snippet",
-    key: "AIzaSyBuCHW7S1hpnmSS5jgfK3jqQcn7OTQocKQ",
+    key: "AIzaSyDxBFBBVCfZPsxa-iVQipghGwq8f423dSg",
     q: gameName + "game review IGN",
     maxResults: 3,
     type: "video",
@@ -106,17 +109,11 @@ function showYoutube(gameName, results) {
       );
     }
     $(".youtube").append(
-      '<hr class="youtubehr"><p class="ext_link"><a href="https://www.youtube.com/results?search_query=' +
-        gameName +
-        `" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i> &nbsp;More on YouTube</a></p>
-      <p style="text-align: center; margin-bottom: 0; margin-top: 10px; font-weight: 400; color: #555;">
-          <a class="mobile_link" href="https://www.youtube.com/t/terms" target="_blank">YouTube Terms of Services</a>
-          <span class="mobile_hide" style="font-weight: 100; padding: 0 10px;">•</span>
-          <a class="mobile_link" href="https://www.google.com/policies/privacy" target="_blank">Google Privacy Policy</a>
-      </p>
-      `
+      `<a href="https://www.youtube.com/results?search_query=${gameName}"
+        target="blank">More on YouTube</a>`
     );
   }
+  $(".modal").scrollTop(0);
 }
 
 function displayMoreInfo(id) {
