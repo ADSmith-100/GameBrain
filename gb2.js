@@ -43,7 +43,7 @@ function displayResults(responseJson) {
         <img src="${responseJson.results[i].background_image}">
         <p>Release Date: ${responseJson.results[i].released}</p>
         <p>Metacritic Score: ${responseJson.results[i].metacritic}</p>
-        <a href="#" id="${responseJson.results[i].id}" class="more-info">More Info</a>
+        <a href="#" id="${responseJson.results[i].id}" class="more-info">More Info and YouTube Review Videos!</a>
       </div>
      `
     );
@@ -65,7 +65,7 @@ function searchYoutube(gameName) {
   var params = {
     part: "snippet",
     key: "AIzaSyBuCHW7S1hpnmSS5jgfK3jqQcn7OTQocKQ",
-    q: gameName + "game review",
+    q: gameName + "IGN game review",
     maxResults: 3,
     type: "video",
     order: "Relevance",
@@ -138,7 +138,7 @@ function showYoutube(gameName, results) {
     $(".youtube").append(html);
     $(".youtube").append(
       '<hr class="youtubehr"><p class="ext_link"><a href="https://www.youtube.com/results?search_query=' +
-        $("#searchfield").val() +
+        gameName +
         `" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i> &nbsp;More on YouTube</a></p>
       <p style="text-align: center; margin-bottom: 0; margin-top: 10px; font-weight: 400; color: #555;">
           <a class="mobile_link" href="https://www.youtube.com/t/terms" target="_blank">YouTube Terms of Services</a>
