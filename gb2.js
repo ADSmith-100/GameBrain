@@ -1,9 +1,10 @@
 const searchURL = "https://api.rawg.io/api/games?";
 
-function getGames(search, page_size = 21) {
+function getGames(search, page_size = 21, ordering) {
   const params = {
     search: search,
     page_size: page_size,
+    ordering: "-rating",
   };
   const queryString = formatQueryParams(params);
   const url = searchURL + queryString;
@@ -65,7 +66,7 @@ function searchYoutube(gameName) {
   var params = {
     part: "snippet",
     key: "AIzaSyBuCHW7S1hpnmSS5jgfK3jqQcn7OTQocKQ",
-    q: gameName + "IGN game review",
+    q: gameName + "game review IGN",
     maxResults: 3,
     type: "video",
     order: "Relevance",
@@ -79,6 +80,7 @@ function searchYoutube(gameName) {
 }
 
 function showYoutube(gameName, results) {
+  console.log(results);
   $(".youtube").empty();
   var html = "";
   //Error msg for no search results
@@ -87,55 +89,22 @@ function showYoutube(gameName, results) {
       '<div class="center"><dt class="youtube_color">Sorry, no YouTube clips were found.</dt><hr><dd class="tips">- Check for correct spelling, spacing and punctunations.<br />- Avoid using other search engine tricks in your search term.<br />- If the YouTube API server is down, try again at a later time.</dd>';
     $(".youtube").append(html);
   } else {
-    $.each(results, function (index, value) {
-      let title = value.snippet.title;
-      if (title.length > 70) {
-        title = title.substring(0, 70).trim() + "...";
-      }
-
-      html +=
-        '<table><tr><td><a href="https://www.youtube.com/watch?v=' +
-        value.id.videoId +
-        '?vq=hd1080" data-lity>' +
-        '<div class="thumbnailWrap"><img class="thumbnail" src="' +
-        value.snippet.thumbnails.medium.url +
-        '"><p class="play"><i class="fa fa-play-circle" aria-hidden="true"></i><br><span class="popup">Play here</span></p></div></a></td>' +
-        '<td class="tdtext"><a href="https://www.youtube.com/watch?v=' +
-        value.id.videoId +
-        '?vq=hd1080" data-lity><p class="videotitle">' +
-        title +
-        '</p></a><p class="videochannel">' +
-        value.snippet.publishedAt
-          .substring(0, value.snippet.publishedAt.length - 14)
-          .replace(/-/g, "/") +
-        ' &middot; <a href="https://www.youtube.com/channel/' +
-        value.snippet.channelId +
-        '" target="_blank">' +
-        value.snippet.channelTitle +
-        '</a></p><a class="read_description" href="#v' +
-        index +
-        '" rel="modal:open"><i class="fa fa-question-circle" aria-hidden="true"></i> Read description</a><p class="fulldescription" id="v' +
-        index +
-        '" style="display: none;"><span class="fd_title"><i class="fa fa-question-circle" aria-hidden="true"></i> ' +
-        value.snippet.title +
-        '</span><span class="fd_by">Posted by <a href="https://www.youtube.com/channel/' +
-        value.snippet.channelId +
-        '" target="_blank">' +
-        value.snippet.channelTitle +
-        "</a> on " +
-        value.snippet.publishedAt
-          .substring(0, value.snippet.publishedAt.length - 14)
-          .replace(/-/g, "/") +
-        "</span>" +
-        value.snippet.description +
-        '<a class="fd_link" href="https://www.youtube.com/watch?v=' +
-        value.id.videoId +
-        '?vq=hd1080" data-lity rel="modal:close"> Watch the video to learn more<i>!</i></a></p><p class="videodescription">' +
-        value.snippet.description.substring(0, 130).trim() +
-        "..." +
-        "</p></td></tr></table>";
-    });
-    $(".youtube").append(html);
+    for (let i = 0; i < results.length; i++) {
+      $(".youtube").append(
+        `
+        <h2>${results[i].snippet.title}</h2><iframe width="420" height="315"
+       src="https://www.youtube.com/embed/${results[i].id.videoId}?controls=1">
+        /iframe>
+      
+        <h2>${results[i].snippet.title}</h2><iframe width="420" height="315"
+        src="https://www.youtube.com/embed/${results[i].id.videoId}?controls=1">
+        /iframe>
+      
+        <h2>${results[i].snippet.title}</h2><iframe width="420" height="315"
+        src="https://www.youtube.com/embed/${results[i].id.videoId}?controls=1">
+        /iframe>`
+      );
+    }
     $(".youtube").append(
       '<hr class="youtubehr"><p class="ext_link"><a href="https://www.youtube.com/results?search_query=' +
         gameName +
