@@ -68,7 +68,7 @@ function searchYoutube(gameName) {
   console.log(gameName);
   var params = {
     part: "snippet",
-    key: "AIzaSyDxBFBBVCfZPsxa-iVQipghGwq8f423dSg",
+    key: "AIzaSyBuCHW7S1hpnmSS5jgfK3jqQcn7OTQocKQ",
     q: gameName + "game review IGN",
     maxResults: 3,
     type: "video",

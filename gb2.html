@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=device-width" />
     <title>Game Brain!</title>
     <link rel="stylesheet" href="gb2.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <section class="container">
-      <h1>Welcome to Game Brain!</h1>
+      <h1>Welcome to Game Brain</h1>
       <p>Enter a search term and get game recomendations!</p>
 
       <form id="js-form">
-        <label for="search-keyword">Search by key word</label>
+        <label for="search-keyword"> </label>
         <input
           type="text"
           name="search-keyword"
@@ -22,7 +30,7 @@
           required
         />
         <br />
-        <input type="submit" value="Go!" />
+        <input class="button" type="submit" value="Go!" />
       </form>
 
       <p id="js-error-message" class="error-message"></p>
