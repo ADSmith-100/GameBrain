@@ -95,15 +95,15 @@ function showYoutube(gameName, results) {
     for (let i = 0; i < results.length; i++) {
       $(".youtube").append(
         `
-        <h2>${results[i].snippet.title}</h2><iframe width="420" height="315"
+        <h3>${results[i].snippet.title}</h3><iframe width="420" height="315"
        src="https://www.youtube.com/embed/${results[i].id.videoId}?controls=1">
         /iframe>
       
-        <h2>${results[i].snippet.title}</h2><iframe width="420" height="315"
+        <h3>${results[i].snippet.title}</h3><iframe width="420" height="315"
         src="https://www.youtube.com/embed/${results[i].id.videoId}?controls=1">
         /iframe>
       
-        <h2>${results[i].snippet.title}</h2><iframe width="420" height="315"
+        <h3>${results[i].snippet.title}</h3><iframe width="420" height="315"
         src="https://www.youtube.com/embed/${results[i].id.videoId}?controls=1">
         /iframe>`
       );
