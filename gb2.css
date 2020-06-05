@@ -1,3 +1,133 @@
+@keyframes move-eye-skew {
+  0% {
+    transform: none;
+  }
+  20% {
+    transform: translateX(-68px) translateY(30px) skewX(15deg) skewY(-10deg)
+      scale(0.95);
+  }
+  25%,
+  44% {
+    transform: none;
+  }
+  50%,
+  60% {
+    transform: translateX(68px) translateY(-40px) skewX(5deg) skewY(2deg)
+      scaleX(0.95);
+  }
+  66%,
+  100% {
+    transform: none;
+  }
+}
+
+.ball {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(
+    circle at 50% 40%,
+    #fcfcfc,
+    #efeff1 66%,
+    #9b5050 100%
+  );
+}
+
+.ball:after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8) 14%,
+    rgba(255, 255, 255, 0) 24%
+  );
+  transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+}
+
+.iris {
+  width: 40%;
+  height: 40%;
+  margin-left: -58px;
+  margin-top: 92px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #208ab4 0%,
+    #6fbfff 30%,
+    #4381b2 100%
+  );
+  transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
+  position: absolute;
+  animation: move-eye-skew 5s ease-out infinite;
+}
+.iris:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 37.5%;
+  height: 37.5%;
+  border-radius: 50%;
+  top: 31.25%;
+  left: 31.25%;
+  background: black;
+}
+.iris:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 31.25%;
+  height: 31.25%;
+  border-radius: 50%;
+  top: 18.75%;
+  left: 18.75%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ball .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.1) 40%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  transform: rotateX(90deg) translateZ(-150px) translateX(-150px);
+  z-index: -1;
+}
+.stage {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  margin: 20px;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  transform: rotateY(0.01deg);
+}
+
+header {
+  width: auto;
+  margin: auto;
+  background: linear-gradient(
+    to bottom,
+    rgba(100, 100, 100, 0.2) 0%,
+    rgba(255, 255, 255, 0.5) 40%,
+    #ffffff 100%
+  );
+  background-repeat: no-repeat;
+}
+
 @media screen and (min-width: 900px) {
   #modal {
     width: 60% !important;
@@ -29,12 +159,12 @@ h1 {
   font-family: "Maven Pro", sans-serif;
   font-size: 3.25em;
   font-weight: 900;
-  color: #222222;
+  color: #8a1945;
 }
 
-h2 h3 {
-  font-family: "Maven Pro", sans-serif;
-  color: #222222;
+.games h2 {
+  font-family: "Maven Pro", sans-serif !important;
+  color: #9f1a20 !important;
 }
 
 input[type="submit"] {
@@ -44,7 +174,9 @@ input[type="submit"] {
   padding: 10px 20px;
   margin-top: 15px;
   font-size: large;
+  font-weight: 900;
   border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 input[type="submit"]:hover {
@@ -61,8 +193,11 @@ p {
 input[type="text"] {
   border: 2px solid #222222;
   border-radius: 4px;
-
-  color: #222222;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
   padding: 10px;
 }
 
@@ -73,6 +208,13 @@ form {
 
 body {
   text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(100, 100, 100, 0.2) 0%,
+    rgba(255, 255, 255, 0.5) 40%,
+    #ffffff 100%
+  );
+  background-repeat: no-repeat;
 }
 
 * {
@@ -94,16 +236,31 @@ a {
 }
 
 .games {
-  border: 2px solid #222222;
-  border-radius: 4px;
+  /*border: 2px solid #9f1a20;*/
+  border: 10px solid;
+  border-image-slice: 1;
+
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 10px;
   width: 90%;
   text-align: center;
-  margin: 10px auto;
+  margin: 30px auto;
+  /*box-shadow: 0 0 0 23px #f3adca;*/
+}
+
+.games:hover {
+  border-radius: 10px;
+  box-shadow: 0 0 0 40px #f3adca;
+  transition: all 200ms ease-out;
+  border-image-source: none;
+  border-color: #9f1a20;
+  border-width: 2px;
 }
 
 .games img {
   width: 66%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .overlay {
@@ -155,4 +312,8 @@ a {
 
 .youtube iframe {
   width: 100%;
+}
+
+.results h3 {
+  display: none;
 }

@@ -85,12 +85,10 @@ function searchYoutube(gameName) {
 function showYoutube(gameName, results) {
   console.log(results);
   $(".youtube").empty();
-  var html = "";
+
   //Error msg for no search results
   if (results.length === 0) {
-    html +=
-      '<div class="center"><dt class="youtube_color">Sorry, no YouTube clips were found.</dt><hr><dd class="tips">- Check for correct spelling, spacing and punctunations.<br />- Avoid using other search engine tricks in your search term.<br />- If the YouTube API server is down, try again at a later time.</dd>';
-    $(".youtube").append(html);
+    $(".youtube").append("No results found");
   } else {
     for (let i = 0; i < results.length; i++) {
       $(".youtube").append(
@@ -98,15 +96,7 @@ function showYoutube(gameName, results) {
         <section>
         <h3>${results[i].snippet.title}</h3><iframe width="420" height="315"
        src="https://www.youtube.com/embed/${results[i].id.videoId}?controls=1" title="${results[i].snippet.title} review video">
-        /iframe>
-      
-        <h3>${results[i].snippet.title}</h3><iframe width="420" height="315"
-        src="https://www.youtube.com/embed/${results[i].id.videoId}?controls=1">
-        /iframe>
-      
-        <h3>${results[i].snippet.title}</h3><iframe width="420" height="315"
-        src="https://www.youtube.com/embed/${results[i].id.videoId}?controls=1">
-        /iframe></section>`
+        /iframe>`
       );
     }
     $(".youtube").append(
@@ -118,6 +108,7 @@ function showYoutube(gameName, results) {
 }
 
 function displayMoreInfo(id) {
+  $(".modal").show();
   console.log({ id });
   $(".modal .modal-image")
     .css("background-image", `url('${id.background_image}')`)

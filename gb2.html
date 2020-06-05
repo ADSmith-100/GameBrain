@@ -16,6 +16,14 @@
   </head>
 
   <body>
+    <header>
+      <section class="stage">
+        <figure class="ball">
+          <span class="shadow"></span>
+          <span class="iris"></span>
+        </figure>
+      </section>
+    </header>
     <main>
       <section class="container">
         <h1>Welcome to Game Brain</h1>
@@ -33,23 +41,30 @@
           </label>
           <br />
           <label for="submit-button">
-            <input class="button" type="submit" value="Go!" />
+            <input
+              id="submit-button"
+              class="button"
+              type="submit"
+              value="Go!"
+            />
           </label>
         </form>
-
-        <p id="js-error-message" class="error-message"></p>
-
-        <section class="results">
-          <h3></h3>
-        <div class="overlay"></div>
-        <div id="modal" class="modal">
-          <h2>Loading...</h2>
-          <div class="modal-image"></div>
-          <p></p>
-          <div class="youtube"></div>
-          <a href="#" class="close">Close</a>
-        </div>
       </section>
+      <p id="js-error-message" class="error-message"></p>
+
+      <section class="results">
+        <h3></h3>
+      </section>
+
+      <div class="overlay"></div>
+      <div id="modal" class="modal">
+        <h2>Loading...</h2>
+        <div class="modal-image"></div>
+        <p></p>
+        <div class="youtube"></div>
+        <a href="#" class="close">Close</a>
+      </div>
+
       <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
       <script src="gb2.js"></script>
     </main>
