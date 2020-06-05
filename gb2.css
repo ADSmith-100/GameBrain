@@ -159,7 +159,7 @@ h1 {
   font-family: "Maven Pro", sans-serif;
   font-size: 3.25em;
   font-weight: 900;
-  color: #222222;
+  color: #8a1945;
 }
 
 .games h2 {
@@ -251,7 +251,7 @@ a {
 
 .games:hover {
   border-radius: 10px;
-  box-shadow: 0 0 0 40px lightpink;
+  box-shadow: 0 0 0 40px #f3adca;
   transition: all 200ms ease-out;
   border-image-source: none;
   border-color: #9f1a20;
