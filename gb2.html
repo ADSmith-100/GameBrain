@@ -26,18 +26,21 @@
             <input
               type="text"
               name="search-keyword"
-              id="search"
+              id="search-keyword"
               placeholder="zelda"
               required
             />
-            <br />
+          </label>
+          <br />
+          <label for="submit-button">
             <input class="button" type="submit" value="Go!" />
           </label>
         </form>
 
         <p id="js-error-message" class="error-message"></p>
 
-        <section class="results"></section>
+        <section class="results">
+          <h3></h3>
         <div class="overlay"></div>
         <div id="modal" class="modal">
           <h2>Loading...</h2>

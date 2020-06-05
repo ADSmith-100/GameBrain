@@ -154,7 +154,7 @@ function closeModal(e) {
 function watchForm() {
   $("form").submit((event) => {
     event.preventDefault();
-    const game = $("#search").val();
+    const game = $("#search-keyword").val();
     //const searchTerm = $("#js-search-term").val();
     //const maxResults = $("#js-max-results").val();
     getGames(game);
