@@ -44,7 +44,7 @@ function displayResults(responseJson) {
         <h2>${responseJson.results[i].name}</h2>
         ${
           responseJson.results[i].background_image !== null
-            ? `<img src="${responseJson.results[i].background_image}"></p>`
+            ? `<img src="${responseJson.results[i].background_image}" alt="${responseJson.results[i].name} background image"></p>`
             : ""
         }
         
@@ -95,8 +95,9 @@ function showYoutube(gameName, results) {
     for (let i = 0; i < results.length; i++) {
       $(".youtube").append(
         `
+        <section>
         <h3>${results[i].snippet.title}</h3><iframe width="420" height="315"
-       src="https://www.youtube.com/embed/${results[i].id.videoId}?controls=1">
+       src="https://www.youtube.com/embed/${results[i].id.videoId}?controls=1" title="${results[i].snippet.title} review video">
         /iframe>
       
         <h3>${results[i].snippet.title}</h3><iframe width="420" height="315"
@@ -105,7 +106,7 @@ function showYoutube(gameName, results) {
       
         <h3>${results[i].snippet.title}</h3><iframe width="420" height="315"
         src="https://www.youtube.com/embed/${results[i].id.videoId}?controls=1">
-        /iframe>`
+        /iframe></section>`
       );
     }
     $(".youtube").append(

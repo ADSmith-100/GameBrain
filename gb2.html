@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -16,36 +16,39 @@
   </head>
 
   <body>
-    <section class="container">
-      <h1>Welcome to Game Brain</h1>
-      <p>Enter a search term and get game recomendations!</p>
+    <main>
+      <section class="container">
+        <h1>Welcome to Game Brain</h1>
+        <p>Enter a search term and get game recomendations!</p>
 
-      <form id="js-form">
-        <label for="search-keyword"> </label>
-        <input
-          type="text"
-          name="search-keyword"
-          id="search"
-          placeholder="zelda"
-          required
-        />
-        <br />
-        <input class="button" type="submit" value="Go!" />
-      </form>
+        <form id="js-form">
+          <label for="search-keyword">
+            <input
+              type="text"
+              name="search-keyword"
+              id="search"
+              placeholder="zelda"
+              required
+            />
+            <br />
+            <input class="button" type="submit" value="Go!" />
+          </label>
+        </form>
 
-      <p id="js-error-message" class="error-message"></p>
+        <p id="js-error-message" class="error-message"></p>
 
-      <section class="results"></section>
-      <div class="overlay"></div>
-      <div id="modal" class="modal">
-        <h2>Loading...</h2>
-        <div class="modal-image"></div>
-        <p></p>
-        <div class="youtube"></div>
-        <a href="#" class="close">Close</a>
-      </div>
-    </section>
-    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-    <script src="gb2.js"></script>
+        <section class="results"></section>
+        <div class="overlay"></div>
+        <div id="modal" class="modal">
+          <h2>Loading...</h2>
+          <div class="modal-image"></div>
+          <p></p>
+          <div class="youtube"></div>
+          <a href="#" class="close">Close</a>
+        </div>
+      </section>
+      <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+      <script src="gb2.js"></script>
+    </main>
   </body>
 </html>
