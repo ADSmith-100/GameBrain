@@ -16,6 +16,12 @@
   </head>
 
   <body>
+    <section class="stage">
+      <figure class="ball">
+        <span class="shadow"></span>
+        <span class="iris"></span>
+      </figure>
+    </section>
     <main>
       <section class="container">
         <h1>Welcome to Game Brain</h1>
@@ -33,14 +39,16 @@
           </label>
           <br />
           <label for="submit-button">
-            <input class="button" type="submit" value="Go!" />
+            <input 
+            id="submit-button"
+            class="button" type="submit" value="Go!" />
           </label>
         </form>
 
         <p id="js-error-message" class="error-message"></p>
 
         <section class="results">
-          <h3></h3>
+          <h3>results</h3>
         <div class="overlay"></div>
         <div id="modal" class="modal">
           <h2>Loading...</h2>
