@@ -44,8 +44,4 @@ Due to time contstraints, I whittled down some of the features I initially consi
 project finished.
     
 
-<h2>MVP features</h2>
 
-User can search by keyword<br>
-User can see metacritic score<br>
-Displays embedded videos/screen shot<br>
