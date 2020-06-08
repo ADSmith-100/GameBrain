@@ -32,10 +32,8 @@ function formatQueryParams(params) {
 }
 
 function displayResults(responseJson) {
-  // if there are previous results, remove them
   console.log(responseJson);
   $(".results").empty();
-  // iterate through the items array
 
   for (let i = 0; i < responseJson.results.length; i++) {
     $(".results").append(
@@ -146,8 +144,7 @@ function watchForm() {
   $("form").submit((event) => {
     event.preventDefault();
     const game = $("#search-keyword").val();
-    //const searchTerm = $("#js-search-term").val();
-    //const maxResults = $("#js-max-results").val();
+
     getGames(game);
   });
 }
