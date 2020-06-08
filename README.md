@@ -10,9 +10,9 @@ as well as embeded YouTube videos of reviews.
 
 ![GameBrain screenshot of intro search screen with eyeball](https://github.com/literalmantis/GameBrain/blob/master/images/Screen%20Shots/GBintroSS.png)
 
-![GameBrain screenshot of zelda games results with eyeball](https://github.com/literalmantis/GameBrain/blob/master/images/Screen%20Shots/GBintroSS.png)
+![GameBrain screenshot of zelda games results with eyeball](https://github.com/literalmantis/GameBrain/blob/master/images/Screen%20Shots/GBresultsSS.jpg)
 
-![GameBrain screenshot of results with more info modal open](https://github.com/literalmantis/GameBrain/blob/master/images/Screen%20Shots/GBresultsSS.jpg)
+![GameBrain screenshot of results with more info modal open](https://github.com/literalmantis/GameBrain/blob/master/images/Screen%20Shots/GBmodalSS.jpg)
 
 <h2>Motivation</h2>
 <p>I have always loved video games and I especially like finding "hidden gems" that I might have missed
