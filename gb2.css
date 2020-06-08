@@ -56,8 +56,8 @@
 .iris {
   width: 40%;
   height: 40%;
-  margin-left: -58px;
-  margin-top: 92px;
+  margin-left: -48px;
+  margin-top: 82px;
   border-radius: 50%;
   background: radial-gradient(
     circle at 50% 50%,
@@ -102,12 +102,12 @@
     rgba(0, 0, 0, 0.1) 40%,
     rgba(0, 0, 0, 0) 50%
   );
-  transform: rotateX(90deg) translateZ(-150px) translateX(-150px);
+  transform: rotateX(90deg) translateZ(-135px) translateX(-125px);
   z-index: -1;
 }
 .stage {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   display: inline-block;
   margin: 20px;
   perspective: 1200px;
@@ -117,7 +117,6 @@
 }
 
 header {
-  width: auto;
   margin: auto;
   background: linear-gradient(
     to bottom,
@@ -157,9 +156,10 @@ header {
 
 h1 {
   font-family: "Maven Pro", sans-serif;
-  font-size: 3.25em;
+  font-size: 50px;
   font-weight: 900;
   color: #8a1945;
+  margin: 12px 0;
 }
 
 .games h2 {
@@ -188,6 +188,7 @@ input[type="submit"]:hover {
 p {
   font-family: "Open Sans", sans-serif;
   color: rgb(65, 59, 59);
+  margin: 8px 0;
 }
 
 input[type="text"] {
@@ -236,22 +237,19 @@ a {
 }
 
 .games {
-  /*border: 2px solid #9f1a20;*/
   border: 10px solid;
   border-image-slice: 1;
-
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 10px;
+  padding: 5px;
   width: 90%;
   text-align: center;
-  margin: 30px auto;
-  /*box-shadow: 0 0 0 23px #f3adca;*/
+  margin: 20px auto;
 }
 
 .games:hover {
   border-radius: 10px;
-  box-shadow: 0 0 0 40px #f3adca;
+  box-shadow: 0 0 0 20px #f3adca;
   transition: all 200ms ease-out;
   border-image-source: none;
   border-color: #9f1a20;
