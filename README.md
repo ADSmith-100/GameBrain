@@ -8,6 +8,12 @@ Upon clicking the more information link they will be shown in depth info about t
 as well as embeded YouTube videos of reviews.
 </p>
 
+![GameBrain screenshot of intro search screen with eyeball](https://github.com/literalmantis/GameBrain/blob/master/images/Screen%20Shots/GBintroSS.png)
+
+![GameBrain screenshot of zelda games results with eyeball](https://github.com/literalmantis/GameBrain/blob/master/images/Screen%20Shots/GBintroSS.png)
+
+![GameBrain screenshot of results with more info modal open](https://github.com/literalmantis/GameBrain/blob/master/images/Screen%20Shots/GBresultsSS.jpg)
+
 <h2>Motivation</h2>
 <p>I have always loved video games and I especially like finding "hidden gems" that I might have missed
 when they first came out.  GameBrain gave me a way to move ahead in my programming studies, as well as a 
