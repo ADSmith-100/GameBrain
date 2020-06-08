@@ -4,7 +4,7 @@ search in the Rawg.io database and see a list of games they might be interested 
 
 <a>https://literalmantis.github.io/GameBrain/gb2.html</a>
 
-Upon clicking the more information link they will be shown in depth info about the game 
+Upon clicking the more information link they will be shown in-depth info about the game 
 as well as embeded YouTube videos of reviews.
 </p>
 
@@ -49,5 +49,6 @@ This app will utilize the RAWG Video Games Database API, the ebay Find API, and 
 Due to time contstraints, I whittled down some of the features I initially considered in order to get a working
 project finished.
     
-
+<h2>Tech Used</h2>
+<p>HTML/CSS/JavaScript/jQuery<p>
 
