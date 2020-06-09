@@ -4,9 +4,15 @@ search in the Rawg.io database and see a list of games they might be interested 
 
 <a>https://literalmantis.github.io/GameBrain/gb2.html</a>
 
-Upon clicking the more information link they will be shown in depth info about the game 
+Upon clicking the more information link they will be shown in-depth info about the game 
 as well as embeded YouTube videos of reviews.
 </p>
+
+![GameBrain screenshot of intro search screen with eyeball](https://github.com/literalmantis/GameBrain/blob/master/images/Screen%20Shots/GBintroSS.png)
+
+![GameBrain screenshot of zelda games results with eyeball](https://github.com/literalmantis/GameBrain/blob/master/images/Screen%20Shots/GBresultsSS.jpg)
+
+![GameBrain screenshot of results with more info modal open](https://github.com/literalmantis/GameBrain/blob/master/images/Screen%20Shots/GBmodalSS.jpg)
 
 <h2>Motivation</h2>
 <p>I have always loved video games and I especially like finding "hidden gems" that I might have missed
@@ -43,5 +49,6 @@ This app will utilize the RAWG Video Games Database API, the ebay Find API, and 
 Due to time contstraints, I whittled down some of the features I initially considered in order to get a working
 project finished.
     
-
+<h2>Tech Used</h2>
+<p>HTML/CSS/JavaScript/jQuery<p>
 
